@@ -1,0 +1,16 @@
+header {
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+    padding: 20px 0;
+}
+
+.menu-bar nav a {
+    color: #333333;
+    /* 08b7ce */
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+.logo a {
+    font-weight: 600;
+    color: #333333;
+}

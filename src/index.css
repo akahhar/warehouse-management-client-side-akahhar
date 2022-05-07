@@ -1,0 +1,209 @@
+/*
+
+  Theme Name: Elrctro house - react template Template
+
+  Author: Nayeem
+
+  Support: Nayeem@gmail.com
+
+  Description: Elrctro house - react template Template
+
+  Version: 1.0
+
+*/
+
+/* 1. Theme default css */
+/* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap'); */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Roboto', sans-serif;
+}
+
+.img {
+  max-width: 100%;
+  transition: all 0.3s ease-out 0s;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  text-decoration: none;
+  transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a,
+button {
+  /* color: #000; */
+  outline: medium none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  color: #333333;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #222222;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 25px;
+  color: rgb(132, 132, 124);
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* button style */
+
+.btn {
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 12px 16px;
+  text-align: center;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  border-color: transparent;
+  background-color: #0d6efd;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #9ea096 !important;
+}
+
+/* section title */
+.section-title h2 {
+  color: #13103a;
+}
+
+.section-title.other h2 {
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 20px;
+}

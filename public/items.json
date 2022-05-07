@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "name": "SHOOTING",
+        "content" : "If you're not shooting in the right direction, it doesn't matter how well you're shooting.",
+        "price" : "150$",
+        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-1.png"
+    },
+    {
+        "id": "2",
+        "name": "EDITING",
+        "content" : "While writing is like a joyful release, editing is a prison where the bars are my former",
+        "price" : "100$",
+        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-2.png"
+    },
+    {
+        "id": "3",
+        "name": "WEDDINGS",
+        "content" : "A successful marriage requires falling in love many times, always with the same person",
+        "price" : "200$",
+        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-3.png"
+    },
+    {
+        "id": "4",
+        "name": "EDITORIALS",
+        "content" : "There are a lot of editorials that have nothing to do with anything like that.",
+        "price" : "90$",
+        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-4.png"
+    }
+]

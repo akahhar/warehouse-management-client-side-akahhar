@@ -1,0 +1,11 @@
+.signIn {
+    border-radius: 30px !important;
+    padding: 5px 10px !important;
+}
+
+.form-container {
+    width: 500px;
+    /* background-color: #000; */
+    margin: 0 auto;
+    padding: 20px;
+}
