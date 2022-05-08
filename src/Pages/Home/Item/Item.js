@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Item = (props) => {
   const { name, content, price, image } = props.item;
+
   return (
     <div className="item-wrapper mb-4">
       <div className="icon">

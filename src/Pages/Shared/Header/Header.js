@@ -1,8 +1,22 @@
+import { signOut } from "firebase/auth";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
 import "./Header.css";
 
 export default function Header() {
+  const [user] = useAuthState(auth);
+  let navigate = useNavigate();
+  const login = () => {
+    navigate("login");
+  };
+
+  const singOutHandler = () => {
+    localStorage.removeItem("token");
+    signOut(auth);
+  };
+
   return (
     <header>
       <div className="container">
@@ -24,10 +38,14 @@ export default function Header() {
             </div>
           </div>
           <div className="col-xl-2 col-lg-2 col-md-2 d-flex align-items-center justify-content-end">
-            {1 ? (
-              <button className="btn">Sign Out</button>
+            {user?.uid ? (
+              <button className="btn" onClick={singOutHandler}>
+                Sign Out
+              </button>
             ) : (
-              <button className="btn">Login</button>
+              <button className="btn" onClick={login}>
+                Login
+              </button>
             )}
             {/* <span>{user?.displayName && user.displayName}</span> */}
           </div>
