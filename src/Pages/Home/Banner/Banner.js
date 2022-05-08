@@ -8,10 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import img4 from "../../../images/banner/img-about1.jpg";
-import img2 from "../../../images/banner/portfolio1-page.jpg";
 import img1 from "../../../images/banner/slider-1.jpg";
-import img3 from "../../../images/banner/slider-2.jpg";
 import "./Banner.css";
 const Banner = () => {
   return (
@@ -29,7 +26,7 @@ const Banner = () => {
         <SwiperSlide>
           <img src={img1} alt="" />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img src={img2} alt="" />
         </SwiperSlide>
         <SwiperSlide>
@@ -37,7 +34,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={img4} alt="" />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );

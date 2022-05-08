@@ -7,7 +7,7 @@ const Footer = () => {
       <p className="text-center py-2 mb-0">
         © 2022{" "}
         <Link to="/" target="_blank">
-          Wedding Moments
+          Electro House
         </Link>
         , All Rights Reserved
       </p>

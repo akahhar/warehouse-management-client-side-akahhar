@@ -6,7 +6,7 @@ const Items = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://morning-atoll-43412.herokuapp.com/service")
+    fetch("https://morning-atoll-43412.herokuapp.com/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);

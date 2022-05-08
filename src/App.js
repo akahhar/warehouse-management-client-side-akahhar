@@ -3,12 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import Blog from "./Pages/Blogs/Blog";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
-import ManageInventories from "./Pages/ManageInventories/ManageInventories";
+import ManageItems from "./Pages/ManageItems/ManageItems";
 import Registration from "./Pages/Registration/Registration";
+import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 import SendPasswordReset from "./Pages/SendPasswordReset/SendPasswordReset ";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
+import UpdateIitems from "./Pages/UpdateIitems/UpdateIitems";
 // import { Button } from 'react-bootstrap';
 
 function App() {
@@ -29,8 +31,16 @@ function App() {
           element={<SendPasswordReset></SendPasswordReset>}
         ></Route>
         <Route
-          path="/manageInventories"
-          element={<ManageInventories></ManageInventories>}
+          path="/inventory/:itemsId"
+          element={
+            <RequireAuth>
+              <UpdateIitems></UpdateIitems>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/ManageItems"
+          element={<ManageItems></ManageItems>}
         ></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>

@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
-  const { name, content, price, image } = props.item;
-
+  const { name, content, price, image, _id } = props.item;
+  console.log(props.item);
   return (
     <div className="item-wrapper mb-4">
       <div className="icon">
@@ -14,8 +14,8 @@ const Item = (props) => {
         <p>{content}</p>
         <strong>Price : {price}</strong>
       </div>
-      <Link to="/checkout" className="btn mt-2">
-        Checkout
+      <Link to={`/inventory/${_id}`} className="btn mt-2">
+        item update
       </Link>
     </div>
   );
