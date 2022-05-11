@@ -34,8 +34,9 @@ export default function Header() {
                 <Link to="/home">Home</Link>
                 {user?.uid && (
                   <>
-                    <Link to="/addItems">Add Items</Link>
+                    <Link to="/addItems">Add Item</Link>
                     <Link to="/manageItems">Manage Items</Link>
+                    <Link to="/myItems">My Items</Link>
                   </>
                 )}
 

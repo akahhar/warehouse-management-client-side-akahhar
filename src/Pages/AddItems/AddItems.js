@@ -1,13 +1,16 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 
 export default function AddItems() {
+  const [user] = useAuthState(auth);
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
   const onSubmit = (data) => {
     // console.log(data);
-    const url = `https://morning-atoll-43412.herokuapp.comaddItems`;
+    const url = `https://morning-atoll-43412.herokuapp.com/addItems`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -24,8 +27,13 @@ export default function AddItems() {
   };
   return (
     <div className="w-50 mx-auto py-5">
-      <h2>Add a items</h2>
+      <h2>Add a new item</h2>
       <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          className="mb-2 form-control"
+          value={user?.email}
+          {...register("email")}
+        />
         <input
           className="mb-2 form-control"
           placeholder="Name"

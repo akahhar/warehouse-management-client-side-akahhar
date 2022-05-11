@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home/Home";
 import ItemDetails from "./Pages/ItemDetails/ItemDetails";
 import Login from "./Pages/Login/Login";
 import ManageItems from "./Pages/ManageItems/ManageItems";
+import MyItems from "./Pages/MyItems/MyItems";
 import Registration from "./Pages/Registration/Registration";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 import SendPasswordReset from "./Pages/SendPasswordReset/SendPasswordReset ";
@@ -52,6 +53,14 @@ function App() {
           element={
             <RequireAuth>
               <ManageItems></ManageItems>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/myItems"
+          element={
+            <RequireAuth>
+              <MyItems></MyItems>
             </RequireAuth>
           }
         ></Route>

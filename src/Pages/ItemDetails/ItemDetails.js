@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function ItemDetails() {
   const [item, setItem] = useState({});
@@ -65,7 +65,7 @@ export default function ItemDetails() {
               <strong>Price : {item.price} </strong>
               <br />
               <span>Quantity : {item.quantity}</span>
-              <div>Supplier name : {item.supplier_name}</div>
+              <div className="mb-3">Supplier name : {item.supplier_name}</div>
             </div>
 
             <button
@@ -74,10 +74,13 @@ export default function ItemDetails() {
             >
               Delivered
             </button>
+            <Link to="/manageItems" className="btn mx-3">
+              Manage Items
+            </Link>
           </div>
         </div>
         <div className="col-xl-6 col-md-6">
-          <div className="add-item mt-5">
+          <div className="add-item mt-5 ">
             <form onSubmit={handleSubmit(onSubmit)}>
               <label htmlFor="quantity" className="form-label">
                 Add Quantity :
@@ -88,7 +91,7 @@ export default function ItemDetails() {
                 type="number"
                 {...register("quantity", { required: true, maxLength: 20 })}
               />
-              <input type="submit" className="btn" value="Add" />
+              <input type="submit" className="btn mb-5" value="Add" />
             </form>
           </div>
         </div>
