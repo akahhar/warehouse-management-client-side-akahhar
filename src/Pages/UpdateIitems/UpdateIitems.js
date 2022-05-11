@@ -9,7 +9,7 @@ const UpdateIitems = () => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/items/${itemsId}`;
+    const url = `https://morning-atoll-43412.herokuapp.com/items/${itemsId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setService(data));
@@ -17,7 +17,7 @@ const UpdateIitems = () => {
 
   const onSubmit = (data) => {
     // console.log(data);
-    const url = `http://localhost:5000/items/${itemsId}`;
+    const url = `https://morning-atoll-43412.herokuapp.com/items/${itemsId}`;
     fetch(url, {
       method: "PUT",
       headers: {

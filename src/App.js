@@ -2,6 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import Blog from "./Pages/Blogs/Blog";
 import Home from "./Pages/Home/Home/Home";
+import ItemDetails from "./Pages/ItemDetails/ItemDetails";
 import Login from "./Pages/Login/Login";
 import ManageItems from "./Pages/ManageItems/ManageItems";
 import Registration from "./Pages/Registration/Registration";
@@ -10,7 +11,6 @@ import SendPasswordReset from "./Pages/SendPasswordReset/SendPasswordReset ";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
-import UpdateIitems from "./Pages/UpdateIitems/UpdateIitems";
 // import { Button } from 'react-bootstrap';
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
           path="/inventory/:itemsId"
           element={
             <RequireAuth>
-              <UpdateIitems></UpdateIitems>
+              <ItemDetails></ItemDetails>
             </RequireAuth>
           }
         ></Route>

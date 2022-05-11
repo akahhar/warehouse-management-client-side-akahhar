@@ -7,7 +7,7 @@ const Items = () => {
 
   useEffect(() => {
     // https://morning-atoll-43412.herokuapp.com/items
-    fetch("http://localhost:5000/items")
+    fetch("https://morning-atoll-43412.herokuapp.com/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);

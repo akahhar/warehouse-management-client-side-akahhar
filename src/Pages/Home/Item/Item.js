@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
-  const { name, description, price, image, _id,quantity } = props.item;
+  const { name, description, price, image, _id, quantity, supplier_name } =
+    props.item;
   console.log(props.item);
   return (
     <div className="item-wrapper mb-4">
@@ -12,9 +13,10 @@ const Item = (props) => {
       <div className="content">
         <h3>{name}</h3>
         <p>{description}</p>
-        <strong>Price : {price}</strong>
+        <strong>Price : {price} </strong>
         <br />
         <span>Quantity : {quantity}</span>
+        <div>Supplier name : {supplier_name}</div>
       </div>
       <Link to={`/inventory/${_id}`} className="btn mt-2">
         item update

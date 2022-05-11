@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import About_company from '../../images/About_company.jpg'
 export default function About() {
   return (
-    <div className='about pt-5'>
+    <div className='about py-5'>
         <div className="container">
             <div className="row">
                 <div className="col-xl-6 col-md-6">
