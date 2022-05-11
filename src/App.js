@@ -1,5 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
+import AddItems from "./Pages/AddItems/AddItems";
 import Blog from "./Pages/Blogs/Blog";
 import Home from "./Pages/Home/Home/Home";
 import ItemDetails from "./Pages/ItemDetails/ItemDetails";
@@ -39,8 +40,20 @@ function App() {
           }
         ></Route>
         <Route
-          path="/ManageItems"
-          element={<ManageItems></ManageItems>}
+          path="/addItems"
+          element={
+            <RequireAuth>
+              <AddItems></AddItems>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/manageItems"
+          element={
+            <RequireAuth>
+              <ManageItems></ManageItems>
+            </RequireAuth>
+          }
         ></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>

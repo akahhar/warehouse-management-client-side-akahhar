@@ -13,15 +13,17 @@ const Items = () => {
   }, []);
 
   return (
-    <div id="items" className="container pt-5">
-      <div className="row">
-        <div className="section-title text-center">
-          <h2>Our Items</h2>
-        </div>
-        <div className="items-container">
-          {items.map((item) => (
-            <Item key={item._id} item={item}></Item>
-          ))}
+    <div className="py-5" style={{ background: "#f2f4f8" }}>
+      <div id="items" className="container">
+        <div className="row">
+          <div className="section-title text-center">
+            <h2>Our Items</h2>
+          </div>
+          <div className="items-container">
+            {items.map((item) => (
+              <Item key={item._id} item={item}></Item>
+            ))}
+          </div>
         </div>
       </div>
     </div>

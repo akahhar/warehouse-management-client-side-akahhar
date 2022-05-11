@@ -80,15 +80,15 @@ export default function ItemDetails() {
           <div className="add-item mt-5">
             <form onSubmit={handleSubmit(onSubmit)}>
               <label htmlFor="quantity" className="form-label">
-                Quantity :
+                Add Quantity :
               </label>
               <input
                 className="mb-2 form-control"
                 placeholder="enter quantity"
                 type="number"
-                {...register("quantity")}
+                {...register("quantity", { required: true, maxLength: 20 })}
               />
-              <input type="submit" className="btn" value="Add quantity" />
+              <input type="submit" className="btn" value="Add" />
             </form>
           </div>
         </div>

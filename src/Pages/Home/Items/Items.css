@@ -4,7 +4,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-
+.item-wrapper {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    padding: 15px;
+}
 /* make items responsive */
 @media only screen and (max-width:576px) {
     .items-container{

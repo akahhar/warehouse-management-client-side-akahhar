@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Item = (props) => {
   const { name, description, price, image, _id, quantity, supplier_name } =
     props.item;
-  console.log(props.item);
+  // console.log(props.item);
   return (
-    <div className="item-wrapper mb-4">
+    <div className="item-wrapper mb-3">
       <div className="icon">
         <img className="img-fluid" src={image} alt="" />
       </div>
@@ -16,11 +16,18 @@ const Item = (props) => {
         <strong>Price : {price} </strong>
         <br />
         <span>Quantity : {quantity}</span>
-        <div>Supplier name : {supplier_name}</div>
+        <div className="mb-2">Supplier name : {supplier_name}</div>
       </div>
-      <Link to={`/inventory/${_id}`} className="btn mt-2">
-        item update
-      </Link>
+
+      {props.deleteItem ? (
+        <button onClick={() => props.deleteItem(_id)} className="btn">
+          Delete
+        </button>
+      ) : (
+        <Link to={`/inventory/${_id}`} className="btn mt-2">
+          item update
+        </Link>
+      )}
     </div>
   );
 };

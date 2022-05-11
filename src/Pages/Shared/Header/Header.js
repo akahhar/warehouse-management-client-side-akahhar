@@ -32,7 +32,13 @@ export default function Header() {
             <div className="menu-bar">
               <nav>
                 <Link to="/home">Home</Link>
-                <Link to="/ManageItems">Manage Items</Link>
+                {user?.uid && (
+                  <>
+                    <Link to="/addItems">Add Items</Link>
+                    <Link to="/manageItems">Manage Items</Link>
+                  </>
+                )}
+
                 <Link to="/blog">Blog</Link>
               </nav>
             </div>

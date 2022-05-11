@@ -1,28 +1,82 @@
 [
-    {
-        "name": "Lenovo IdeaPad Slim 3i 15IGL Intel Celeron N4020 15.6 HD Laptop",
-        "description" : "MPN: 81WQ00FAIN Model: IdeaPad Slim 3i Processor: Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz Memory: 4GB DDR4 2400MHz RAM",
-        "price" : "400$",
-        "quantity" : 20,
-        "supplier_name" : "startech",
-        "image" : "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-500x500.jpg"
-    },
-    {
-        "name": "Lenovo IdeaPad D330 10IGL Intel CDC N4020 10.1",
-        "description" : "MPN: 82H0001VIN Model: IdeaPad D330 10IGL Processor: Intel Celeron N4020 (4M Cache,1.10 GHz up to 2.80 GHz) RAM: 4GB DDR4",
-        "price" : "650$",
-        "quantity" : 30,
-        "supplier_name" : "startech",
-        "image" : "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/d330/d330-1-500x500.jpg"
-    },
-    {
-        "name": "HP 15s-fq3234TU Celeron N4500 15.6",
-        "description" : "MPN: 5B356PA Model: 15s-fq3234TU Processor: Intel Celeron N4500 (4M Cache, 1.10 GHz up to 2.80 GHz) Memory: 4 GB DDR4-2933 MHz RAM (1 x 4 GB)",
-        "price" : "540$",
-        "quantity" : 50,
-        "supplier_name" : "startech",
-        "image" : "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-fq2597tu/15s-fq2597tu-01-500x500.jpg"
-    }
-   
-    
+  {
+    "name": "Lenovo IdeaPad Slim 3i 15IGL Intel Celeron N4020 15.6 HD Laptop",
+    "description": "MPN: 81WQ00FAIN Model: IdeaPad Slim 3i Processor: Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz Memory: 4GB DDR4 2400MHz RAM",
+    "price": "400$",
+    "quantity": 20,
+    "supplier_name": "startech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-500x500.jpg"
+  },
+  {
+    "name": "Lenovo IdeaPad D330 10IGL Intel CDC N4020 10.1",
+    "description": "MPN: 82H0001VIN Model: IdeaPad D330 10IGL Processor: Intel Celeron N4020 (4M Cache,1.10 GHz up to 2.80 GHz) RAM: 4GB DDR4",
+    "price": "650$",
+    "quantity": 30,
+    "supplier_name": "startech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/d330/d330-1-500x500.jpg"
+  },
+  {
+    "name": "HP 15s-fq3234TU Celeron N4500 15.6",
+    "description": "MPN: 5B356PA Model: 15s-fq3234TU Processor: Intel Celeron N4500 (4M Cache, 1.10 GHz up to 2.80 GHz) Memory: 4 GB DDR4-2933 MHz RAM (1 x 4 GB)",
+    "price": "540$",
+    "quantity": 50,
+    "supplier_name": "startech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-fq2597tu/15s-fq2597tu-01-500x500.jpg"
+  },
+  {
+    "name": "Chuwi HeroBook Pro Intel Celeron N4020 14.1 inch Full HD Laptop with Windows 10",
+    "description": "Model: Chuwi HeroBook Pro Intel Celeron Processor N4020 (4M Cache, 1.10 GHz up to 2.80 GHz) 8GB LPDDR4 RAM 256GB SSD",
+    "price": "$300",
+    "quantity": 40,
+    "supplier_name": "a4Tech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/chuwi/herobook/herobook-pro/herobook-pro-1-500x500.jpg"
+  },
+  {
+    "name": "Asus Vivobook X515MA Celeron N4020 15.6",
+    "description": "MPN: BR763W Model: Vivobook X515MA Processor: Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz) Memory: 4GB DDR4 RAM",
+    "price": "$740",
+    "quantity": 10,
+    "supplier_name": "techpy",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/asus/vivobook-15-x515ea/vivobook-15-x515ea-01-500x500.jpg"
+  },
+  {
+    "name": "Lenovo IdeaPad Slim 3i Celeron N4020 256GB SSD 15.6 ",
+    "description": "MPN: 81WQ00BYIN Model: IdeaPad Slim 3i Processor: Intel Celeron N4020 (4M Cache,1.10 GHz up to 2.80 GHz) RAM: 4GB DDR4 2400Mhz",
+    "price": "$1000",
+    "quantity": 6,
+    "supplier_name": "techpy",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/slim-3i/slim-3i-001-500x500.jpg"
+  },
+  {
+    "name": "HP 15s-eq1548AU AMD Athlon 3050U 15.6",
+    "description": "MPN: 605T8PA Model: 15s-eq1548AU Processor: AMD Athlon Silver 3050U (2.3 GHz up to 3.2GHz) Memory: 8 GB DDR4-2400 MHz RAM ",
+    "price": "$360",
+    "quantity": 30,
+    "supplier_name": "startech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/hp-15s/hp-15s-spruce-blue-02-500x500.jpg"
+  },
+  {
+    "name": "Asus Vivobook X515MA Celeron N4020 15.6",
+    "description": "MPN: BQ675W Model: Vivobook X515MA Intel Celeron Processor N4020 (4M Cache, 1.10 GHz up to 2.80 GHz) 4GB DDR4 RAM",
+    "price": "$400",
+    "quantity": 40,
+    "supplier_name": "startech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/asus/vivobook-x515ma/vivobook-x515ma-01-500x500.jpg"
+  },
+  {
+    "name": "Asus VivoBook 15 E510MA Celeron N4020 15.6",
+    "description": "MPN: EJ601W Model: VivoBook 15 E510MA Processor: Intel Celeron Dual Core N4020 (1.10 GHz up to 2.80 GHz, Cache 4MB) Memory: 4GB DDR4 RAM (Onboard)",
+    "price": "$460",
+    "quantity": 80,
+    "supplier_name": "startech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/asus/vivobook-15-e510ma/vivobook-15-e510ma-0101-500x500.jpg"
+  },
+  {
+    "name": "Acer Extensa 15 EX215-54-37AH Core i3 11th Gen 15.6",
+    "description": "MPN: NX.EGJSI.001 Model: Extensa 15 EX215-54-37AH Processor: Intel Core i3-1115G4 (6M Cache, 3.00 GHz up to 4.10 GHz) Memory: 4 GB DDR4 SDRAM",
+    "price": "$980",
+    "quantity": 60,
+    "supplier_name": "startech",
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/acer/extensa-ex215/extensa-ex215-1-500x500.jpg"
+  }
 ]
