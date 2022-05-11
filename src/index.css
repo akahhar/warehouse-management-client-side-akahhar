@@ -200,8 +200,8 @@ p {
 /* section title */
 .section-title h2 {
   color: #13103a;
+  font-size: 55px;
 }
-
 .section-title.other h2 {
   font-size: 36px;
   line-height: 54px;

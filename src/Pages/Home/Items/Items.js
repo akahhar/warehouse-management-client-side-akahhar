@@ -6,15 +6,18 @@ const Items = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://morning-atoll-43412.herokuapp.com/items")
+    // https://morning-atoll-43412.herokuapp.com/items
+    fetch("http://localhost:5000/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
 
   return (
-    <div id="items" className="container">
+    <div id="items" className="container pt-5">
       <div className="row">
-        <h1 className="text-primary text-center mt-5">Our Items</h1>
+        <div className="section-title text-center">
+          <h2>Our Items</h2>
+        </div>
         <div className="items-container">
           {items.map((item) => (
             <Item key={item._id} item={item}></Item>

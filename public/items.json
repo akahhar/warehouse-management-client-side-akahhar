@@ -1,30 +1,28 @@
 [
     {
-        "id": "1",
-        "name": "SHOOTING",
-        "content" : "If you're not shooting in the right direction, it doesn't matter how well you're shooting.",
-        "price" : "150$",
-        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-1.png"
+        "name": "Lenovo IdeaPad Slim 3i 15IGL Intel Celeron N4020 15.6 HD Laptop",
+        "description" : "MPN: 81WQ00FAIN Model: IdeaPad Slim 3i Processor: Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz Memory: 4GB DDR4 2400MHz RAM",
+        "price" : "400$",
+        "quantity" : 1,
+        "supplier_name" : "startech",
+        "image" : "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-500x500.jpg"
     },
     {
-        "id": "2",
-        "name": "EDITING",
-        "content" : "While writing is like a joyful release, editing is a prison where the bars are my former",
-        "price" : "100$",
-        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-2.png"
+        "name": "Lenovo IdeaPad D330 10IGL Intel CDC N4020 10.1",
+        "description" : "MPN: 82H0001VIN Model: IdeaPad D330 10IGL Processor: Intel Celeron N4020 (4M Cache,1.10 GHz up to 2.80 GHz) RAM: 4GB DDR4",
+        "price" : "650$",
+        "quantity" : 1,
+        "supplier_name" : "startech",
+        "image" : "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/d330/d330-1-500x500.jpg"
     },
     {
-        "id": "3",
-        "name": "WEDDINGS",
-        "content" : "A successful marriage requires falling in love many times, always with the same person",
-        "price" : "200$",
-        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-3.png"
-    },
-    {
-        "id": "4",
-        "name": "EDITORIALS",
-        "content" : "There are a lot of editorials that have nothing to do with anything like that.",
-        "price" : "90$",
-        "image" : "https://solene.qodeinteractive.com/wp-content/uploads/2019/12/our-services-icon-4.png"
+        "name": "HP 15s-fq3234TU Celeron N4500 15.6",
+        "description" : "MPN: 5B356PA Model: 15s-fq3234TU Processor: Intel Celeron N4500 (4M Cache, 1.10 GHz up to 2.80 GHz) Memory: 4 GB DDR4-2933 MHz RAM (1 x 4 GB)",
+        "price" : "540$",
+        "quantity" : 1,
+        "supplier_name" : "startech",
+        "image" : "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-fq2597tu/15s-fq2597tu-01-500x500.jpg"
     }
+   
+    
 ]
