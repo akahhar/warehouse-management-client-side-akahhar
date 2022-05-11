@@ -9,7 +9,10 @@ const Items = () => {
     // https://morning-atoll-43412.herokuapp.com/items
     fetch("https://morning-atoll-43412.herokuapp.com/items")
       .then((res) => res.json())
-      .then((data) => setItems(data));
+      .then((data) => {
+        const newData = data.slice(0, 6);
+        setItems(newData);
+      });
   }, []);
 
   return (
