@@ -13,7 +13,7 @@ const Item = (props) => {
       <div className="content">
         <h3>{name}</h3>
         <p>{description}</p>
-        <strong>Price : {price} </strong>
+        <strong>Price : ${price} </strong>
         <br />
         <span>Quantity : {quantity}</span>
         <div className="mb-2">Supplier name : {supplier_name}</div>

@@ -21,14 +21,14 @@ export default function Header() {
     <header>
       <div className="container">
         <div className="row">
-          <div className="col-xl-3 col-lg-3 col-md-3 d-flex align-items-center">
+          <div className="col-xl-3 col-lg-3 col-md-3 d-flex align-items-center justify-content-center">
             <div className="logo">
               <Link to="/">
                 <span>Electro House</span>
               </Link>
             </div>
           </div>
-          <div className="col-xl-7 col-lg-7 col-md-7 d-flex align-items-center justify-content-end">
+          <div className="col-xl-7 col-lg-7 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
             <div className="menu-bar">
               <nav>
                 <Link to="/home">Home</Link>
@@ -44,7 +44,7 @@ export default function Header() {
               </nav>
             </div>
           </div>
-          <div className="col-xl-2 col-lg-2 col-md-2 d-flex align-items-center justify-content-end">
+          <div className="col-xl-2 col-lg-2 col-md-2 d-flex align-items-center justify-content-end justify-content-center">
             {user?.uid ? (
               <button className="btn" onClick={singOutHandler}>
                 Sign Out

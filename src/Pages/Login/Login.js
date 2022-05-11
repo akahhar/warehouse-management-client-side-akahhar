@@ -52,7 +52,9 @@ const Login = () => {
 
   return (
     <div className="form-container">
-      <h1>Please Login now</h1>
+      <div className="section-title">
+        <h2>Please login now</h2>
+      </div>
       <form onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">

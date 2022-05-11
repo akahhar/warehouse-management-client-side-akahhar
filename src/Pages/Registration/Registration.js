@@ -58,7 +58,9 @@ const Registration = () => {
 
   return (
     <div className="form-container">
-      <h1>Please Registration now</h1>
+      <div className="section-title">
+        <h2>Please Registration now</h2>
+      </div>
       <form onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">

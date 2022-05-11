@@ -26,50 +26,63 @@ export default function AddItems() {
       });
   };
   return (
-    <div className="w-50 mx-auto py-5">
-      <h2>Add a new item</h2>
-      <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
-        <input
-          className="mb-2 form-control"
-          value={user?.email}
-          {...register("email")}
-        />
-        <input
-          className="mb-2 form-control"
-          placeholder="Name"
-          {...register("name", { required: true })}
-        />
-        <textarea
-          className="mb-2 form-control"
-          placeholder="Description"
-          {...register("description", { required: true })}
-        />
-        <input
-          className="mb-2 form-control"
-          placeholder="Price"
-          type="number"
-          {...register("price", { required: true })}
-        />
-        <input
-          className="mb-2 form-control"
-          placeholder="Quantity"
-          type="text"
-          {...register("quantity", { required: true })}
-        />
-        <input
-          className="mb-2 form-control"
-          placeholder="Supplier Name"
-          type="text"
-          {...register("supplier_name", { required: true })}
-        />
-        <input
-          className="mb-2 form-control"
-          placeholder="Photo URL"
-          type="text"
-          {...register("image")}
-        />
-        <input type="submit" className="btn form-control" value="Add Items" />
-      </form>
+    <div className="py-5">
+      <div className="container">
+        <h2>Add a new item</h2>
+        <div className="row">
+          <div className="col-xl-6">
+            <form
+              className="d-flex flex-column"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <input
+                className="mb-2 form-control"
+                value={user?.email}
+                {...register("email")}
+              />
+              <input
+                className="mb-2 form-control"
+                placeholder="Name"
+                {...register("name", { required: true })}
+              />
+              <textarea
+                className="mb-2 form-control"
+                placeholder="Description"
+                {...register("description", { required: true })}
+              />
+              <input
+                className="mb-2 form-control"
+                placeholder="Price"
+                type="number"
+                {...register("price", { required: true })}
+              />
+              <input
+                className="mb-2 form-control"
+                placeholder="Quantity"
+                type="number"
+                {...register("quantity", { required: true })}
+              />
+              <input
+                className="mb-2 form-control"
+                placeholder="Supplier Name"
+                type="text"
+                {...register("supplier_name", { required: true })}
+              />
+              <input
+                className="mb-2 form-control"
+                placeholder="Photo URL"
+                type="text"
+                {...register("image")}
+              />
+              <input
+                type="submit"
+                className="btn form-control"
+                value="Add Items"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

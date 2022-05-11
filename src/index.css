@@ -207,3 +207,14 @@ p {
   line-height: 54px;
   margin-bottom: 20px;
 }
+
+
+
+@media only screen and (max-width : 576px) {
+  .section-title h2 {
+    font-size: 30px;
+  }
+  .menu-bar{
+    margin: 10px 0;
+  }
+}
