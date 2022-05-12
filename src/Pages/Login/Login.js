@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
+import useToken from "../../hooks/useToken";
 import google from "../../images/google-logo.png";
 import "./Login.css";
 
@@ -28,35 +28,30 @@ const Login = () => {
   const from = location?.state?.from?.pathname || "/";
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+  const [token] = useToken(user || user1);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post(
-      "https://morning-atoll-43412.herokuapp.com/userToken",
-      {
-        email: email,
-      }
-    );
-    localStorage.setItem("storageAccessToken", data.userAccessToken);
-  };
-  const [signInWithGoogle] = useSignInWithGoogle(auth);
-  const handleGoogleSignIn = () => {
-    signInWithGoogle().then((data) => {
-      navigate(from, { replace: true });
-    });
   };
 
-  const notify = () => toast.error(error?.message);
+  const handleGoogleSignIn = async () => {
+    await signInWithGoogle();
+  };
+
+  if (token) {
+    navigate(from, { replace: true });
+  }
 
   useEffect(() => {
-    if (error) {
-      notify();
+    if (error || error1) {
+      toast.error(error?.message || error1?.message);
     }
-    if (user?.user?.accessToken) {
-      navigate(from);
-    }
-  }, [error, user]);
+    // if (user?.user?.accessToken) {
+    //   navigate(from);
+    // }
+  }, [error, error1]);
 
   return (
     <div className="form-container">

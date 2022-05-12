@@ -4,12 +4,14 @@ import {
   useCreateUserWithEmailAndPassword,
   useSendEmailVerification,
 } from "react-firebase-hooks/auth";
-import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
+import useToken from "../../hooks/useToken";
 
 const Registration = () => {
-  const [sendEmailVerification] = useSendEmailVerification(auth);
+  const [sendEmailVerification, sending1, error1] =
+    useSendEmailVerification(auth);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [conPassword, setConPassword] = useState("");
@@ -17,6 +19,7 @@ const Registration = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
+  const [token] = useToken(user);
   const emailHandler = (event) => {
     setEmail(event.target.value);
   };
@@ -31,8 +34,8 @@ const Registration = () => {
   const ConPasswordHandler = (event) => {
     setConPassword(event.target.value);
   };
-  const notify = () => toast.error(error?.message);
-  const handleFormSubmit = (event) => {
+
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     if (password !== conPassword) {
@@ -43,18 +46,25 @@ const Registration = () => {
       setCustomError("Password must be 6 characters or longer");
       return;
     }
-    createUserWithEmailAndPassword(email, password);
-    sendEmailVerification(email);
+    await createUserWithEmailAndPassword(email, password);
+    await sendEmailVerification(email);
   };
+
+  if (token) {
+    navigate(from, { replace: true });
+  }
 
   useEffect(() => {
     if (error) {
-      notify();
+      toast.error(error?.message);
     }
-    if (user?.user?.accessToken) {
-      navigate(from);
+    if (sending1) {
+      toast.warning("please verify your email");
     }
-  }, [error, user]);
+    // if (user?.user?.accessToken) {
+    //   navigate(from);
+    // }
+  }, [error, sending1]);
 
   return (
     <div className="form-container">
