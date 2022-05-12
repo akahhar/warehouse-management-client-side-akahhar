@@ -20,9 +20,14 @@ const Item = (props) => {
       </div>
 
       {props.deleteItem ? (
-        <button onClick={() => props.deleteItem(_id)} className="btn">
-          Delete
-        </button>
+        <>
+          <button onClick={() => props.deleteItem(_id)} className="btn">
+            Delete
+          </button>
+          <Link to={`/inventory/${_id}`} className="btn mx-2">
+            item update
+          </Link>
+        </>
       ) : (
         <Link to={`/inventory/${_id}`} className="btn mt-2">
           item update

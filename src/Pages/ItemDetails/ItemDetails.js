@@ -28,7 +28,7 @@ export default function ItemDetails() {
       .then((res) => res.json())
       .then((result) => {
         if (result.acknowledged) {
-          toast.success("Scuccessfully Update Item Quantity");
+          toast.success("Successfully Update Item Quantity");
           navigate("/home");
         }
       });
