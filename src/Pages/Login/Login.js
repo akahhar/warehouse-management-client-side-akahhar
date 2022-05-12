@@ -32,10 +32,12 @@ const Login = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post("http://localhost:5000/userToken", {
-      email: email,
-    });
-    // console.log(data);
+    const { data } = await axios.post(
+      "https://morning-atoll-43412.herokuapp.com/userToken",
+      {
+        email: email,
+      }
+    );
     localStorage.setItem("storageAccessToken", data.userAccessToken);
   };
   const [signInWithGoogle] = useSignInWithGoogle(auth);
