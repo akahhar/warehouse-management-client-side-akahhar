@@ -2,8 +2,8 @@ import {
   useAuthState,
   useSendEmailVerification,
 } from "react-firebase-hooks/auth";
-import toast from "react-hot-toast";
 import { Navigate, useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const RequireAuth = ({ children }) => {

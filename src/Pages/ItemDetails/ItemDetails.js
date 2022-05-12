@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function ItemDetails() {
   const [item, setItem] = useState({});
@@ -27,6 +28,7 @@ export default function ItemDetails() {
       .then((res) => res.json())
       .then((result) => {
         if (result.acknowledged) {
+          toast.success("Scuccessfully Update Item Quantity");
           navigate("/home");
         }
       });
@@ -50,9 +52,6 @@ export default function ItemDetails() {
   };
   return (
     <div className="container py-5">
-      <div className="section-title text-center">
-        <h2>Item Details</h2>
-      </div>
       <div className="row">
         <div className="col-xl-6 col-md-6">
           <div className="item-wrapper mb-4">

@@ -1,5 +1,8 @@
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+// import { Button } from 'react-bootstrap';
+import "react-toastify/dist/ReactToastify.css";
 import AddItems from "./Pages/AddItems/AddItems";
 import Blog from "./Pages/Blogs/Blog";
 import Home from "./Pages/Home/Home/Home";
@@ -13,7 +16,6 @@ import SendPasswordReset from "./Pages/SendPasswordReset/SendPasswordReset ";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
-// import { Button } from 'react-bootstrap';
 
 function App() {
   return (
@@ -68,6 +70,7 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

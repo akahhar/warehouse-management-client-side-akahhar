@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
   useSignInWithEmailAndPassword,
@@ -28,9 +29,14 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post("http://localhost:5000/userToken", {
+      email: email,
+    });
+    // console.log(data);
+    localStorage.setItem("storageAccessToken", data.userAccessToken);
   };
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const handleGoogleSignIn = () => {

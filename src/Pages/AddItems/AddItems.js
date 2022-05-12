@@ -2,6 +2,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 export default function AddItems() {
@@ -21,7 +22,8 @@ export default function AddItems() {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          navigate("/home");
+          toast.success("Item Added! Thank you.");
+          navigate("/myItems");
         }
       });
   };
