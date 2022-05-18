@@ -1,23 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "react-query";
+import { Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function ItemDetails() {
-  const [item, setItem] = useState({});
+  // const [item, setItem] = useState({});
   const { itemsId } = useParams();
-  const navigate = useNavigate();
 
   const { register, handleSubmit } = useForm();
-  useEffect(() => {
-    const url = `https://morning-atoll-43412.herokuapp.com/items/${itemsId}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setItem(data));
-  }, []);
+  // useEffect(() => {
+  //   const url = `http://localhost:5000/items/${itemsId}`;
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => setItem(data));
+  // }, [itemsId]);
+
+  const {
+    data: item,
+    isLoading,
+    refetch,
+  } = useQuery(["items", itemsId], () =>
+    fetch(`http://localhost:5000/items/${itemsId}`).then((res) => res.json())
+  );
+  if (isLoading) {
+    return "Loading2...";
+  }
+
   const onSubmit = (data) => {
     // console.log(data);
-    const url = `https://morning-atoll-43412.herokuapp.com/updateQuantity/${itemsId}`;
+    const url = `http://localhost:5000/updateQuantity/${itemsId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -29,13 +41,13 @@ export default function ItemDetails() {
       .then((result) => {
         if (result.acknowledged) {
           toast.success("Successfully Update Item Quantity");
-          navigate("/home");
+          refetch();
         }
       });
   };
 
-  const onClickDeliveredItmes = (id) => {
-    const url = `https://morning-atoll-43412.herokuapp.com/delivered/${id}`;
+  const onClickDeliveredItems = (id) => {
+    const url = `http://localhost:5000/delivered/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -46,7 +58,7 @@ export default function ItemDetails() {
       .then((res) => res.json())
       .then((result) => {
         if (result.acknowledged) {
-          navigate("/home");
+          refetch();
         }
       });
   };
@@ -56,20 +68,20 @@ export default function ItemDetails() {
         <div className="col-xl-6 col-md-6">
           <div className="item-wrapper mb-4">
             <div className="icon">
-              <img className="img-fluid" src={item.image} alt="" />
+              <img className="img-fluid w-50" src={item?.image} alt="" />
             </div>
             <div className="content">
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <strong>Price : {item.price} </strong>
+              <h3>{item?.name}</h3>
+              <p>{item?.description}</p>
+              <strong>Price : {item?.price} </strong>
               <br />
-              <span>Quantity : {item.quantity}</span>
-              <div className="mb-3">Supplier name : {item.supplier_name}</div>
+              <span>Quantity : {item?.quantity}</span>
+              <div className="mb-3">Supplier name : {item?.supplier_name}</div>
             </div>
 
             <button
               className="btn"
-              onClick={() => onClickDeliveredItmes(item._id)}
+              onClick={() => onClickDeliveredItems(item?._id)}
             >
               Delivered
             </button>

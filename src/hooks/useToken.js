@@ -7,12 +7,9 @@ export default function useToken(user) {
     const getToken = async () => {
       const email = user?.user?.email;
       if (email) {
-        const { data } = await axios.post(
-          "https://morning-atoll-43412.herokuapp.com/userToken",
-          {
-            email: email,
-          }
-        );
+        const { data } = await axios.post("http://localhost:5000/userToken", {
+          email: email,
+        });
         setToken(data.userAccessToken);
         localStorage.setItem("storageAccessToken", data.userAccessToken);
       }

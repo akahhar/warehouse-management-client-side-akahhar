@@ -6,8 +6,8 @@ export default function ManageItems() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // https://morning-atoll-43412.herokuapp.com/items
-    fetch("https://morning-atoll-43412.herokuapp.com/items")
+    // http://localhost:5000/items
+    fetch("http://localhost:5000/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -15,7 +15,7 @@ export default function ManageItems() {
   const deleteItem = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://morning-atoll-43412.herokuapp.com/delteItem/${id}`;
+      const url = `http://localhost:5000/delteItem/${id}`;
       fetch(url, {
         method: "DELETE",
       })

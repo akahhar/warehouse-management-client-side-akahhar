@@ -9,8 +9,8 @@ const Items = () => {
 
   useEffect(() => {
     setLoading(true);
-    // https://morning-atoll-43412.herokuapp.com/items
-    fetch("https://morning-atoll-43412.herokuapp.com/items")
+    // http://localhost:5000/items
+    fetch("http://localhost:5000/items")
       .then((res) => res.json())
       .then((data) => {
         const newData = data.slice(0, 6);

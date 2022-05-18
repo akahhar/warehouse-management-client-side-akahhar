@@ -11,7 +11,7 @@ export default function MyItems() {
   useEffect(() => {
     const email = user?.email;
     const getMyItems = async () => {
-      const url = `https://morning-atoll-43412.herokuapp.com/userItems?email=${email}`;
+      const url = `http://localhost:5000/userItems?email=${email}`;
       const { data } = await axios.get(url, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("storageAccessToken")}`,
@@ -25,7 +25,7 @@ export default function MyItems() {
   const deleteItem = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://morning-atoll-43412.herokuapp.com/delteItem/${id}`;
+      const url = `http://localhost:5000/delteItem/${id}`;
       fetch(url, {
         method: "DELETE",
       })
