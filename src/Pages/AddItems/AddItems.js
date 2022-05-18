@@ -11,7 +11,7 @@ export default function AddItems() {
   const navigate = useNavigate();
   const onSubmit = (data) => {
     // console.log(data);
-    const url = `http://localhost:5000/addItems`;
+    const url = `https://morning-atoll-43412.herokuapp.com/addItems`;
     fetch(url, {
       method: "POST",
       headers: {

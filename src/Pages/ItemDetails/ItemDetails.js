@@ -10,7 +10,7 @@ export default function ItemDetails() {
 
   const { register, handleSubmit } = useForm();
   // useEffect(() => {
-  //   const url = `http://localhost:5000/items/${itemsId}`;
+  //   const url = `https://morning-atoll-43412.herokuapp.com/items/${itemsId}`;
   //   fetch(url)
   //     .then((res) => res.json())
   //     .then((data) => setItem(data));
@@ -21,7 +21,9 @@ export default function ItemDetails() {
     isLoading,
     refetch,
   } = useQuery(["items", itemsId], () =>
-    fetch(`http://localhost:5000/items/${itemsId}`).then((res) => res.json())
+    fetch(`https://morning-atoll-43412.herokuapp.com/items/${itemsId}`).then(
+      (res) => res.json()
+    )
   );
   if (isLoading) {
     return "Loading2...";
@@ -29,7 +31,7 @@ export default function ItemDetails() {
 
   const onSubmit = (data) => {
     // console.log(data);
-    const url = `http://localhost:5000/updateQuantity/${itemsId}`;
+    const url = `https://morning-atoll-43412.herokuapp.com/updateQuantity/${itemsId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -47,7 +49,7 @@ export default function ItemDetails() {
   };
 
   const onClickDeliveredItems = (id) => {
-    const url = `http://localhost:5000/delivered/${id}`;
+    const url = `https://morning-atoll-43412.herokuapp.com/delivered/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
