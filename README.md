@@ -8,5 +8,6 @@
 - using react-toast
 - using axios
 - using JWT
+- using daisyui
 - sign in with google
 - signUp with email and password
